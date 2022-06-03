@@ -8,5 +8,8 @@
 require 'faker'
 
 100.times do
-  p Restaurant.create(name: Faker::Restaurant.name, address: Faker::Address.street_address, rating: rand(1..5))
+  name = Faker::Restaurant.name
+  address = Faker::Address.street_address
+  rating = rand(1..5)
+  p Restaurant.create(name: name, address: address, rating: rating)
 end
